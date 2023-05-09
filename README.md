@@ -1,8 +1,23 @@
-# ICA_vs_PCA_comparisonPlot-of-my-image-
-HERE I HAVE USED AN IMAGE TO FIGURE OUT THE PERFORMANCE OF ICA AND PCA. FIRST IMAGE IS UPLOADED. THEN IT WAS CROPPED TO CERTAIN DIMENSION WHICH LOOKS LIKE A HORIZONTAL PATTERN.
-AFTER CROPPING, I INCLUDED MIXING MATRIX WITH IT, BY GENERATING RANDOM MATRIX. IT LOOKS LIKE COMBINATION OF SOME VERTICAL PATTERN.
-LATER, I TRIED TO GET THE SOURCE IMAGE BY ICA AND PCA.
-WITH ICA WE CAN SEE THAT A HORIZONTAL PATTERN WITH CHECKERBOARD PATTERN  HAS CONSTRUCTED BUT STILL IT IS FAR WAY FROM THE ORIGINAL.
-ON THE OTHER HAND IN PCA NOTHING MUCH IMPROVED NO SIMILAR PATTERN HAS GENERATED.
-IF WE SEE THE PLOT WITH INTENSITY OF THE PIXELS, WE SEE IN ICA PIXEL VALUES ARE CLOSE TO THE ORIGINAL IMAGE STILL IT IS NOT SIMILAR.
-ON THE OTHER HAND IN PCA THE PIXEL VALUES DIFFER TOO MUCH THAN THE ORIGINAL IMAGE.
+# Introduction
+In this project it has it has been demonstrated how good Independent Component Analysis performs while removing artifacts from images.
+Independent Component Analysis or ICA is a statistical method which is widely used in blind source separation(BSS). It is widely used in retrieving signals but
+recently it has been using also in retrieving images from artifacts. It is used in separating individual signals from mixed signals. A simple application of ICA is
+'Cocktail Party problem'. With ICA, signals (or data)can be seperated from a linear mixture with other variables or artifacts. These artifacts can be gaussian, non
+gaussian, or log-gaussian. 
+It is proven that ICA acts well where the signal is mixed with non-gaussian noises. There are two well known algorithms in ICA - Infomax and FastICA. 
+Here with this project I have used FastICA to separate noises from Image. 
+# Workflow
+First, I have uploaded two gray scale images. Then, I have added these images with random matrix (Gaussian, Non-Gaussian, Log-Gaussian). Here matrixes acted as
+random noise which can come out from different sources while acquiring images. After mixing images with random matrix FastICA algorithm was run to this mixture
+for cancelling the noises and separate images. I have run the iterations for more than thousand times. 
+Lastly, the input and output images were displayed including histograms of the images. 
+# Result
+In three different cases of noises - Gaussian, Non-Gaussian, and Log-Gaussian - it was found that ICA acted well in case of the noise is non-gaussian. 
+# Software Packages
+Python, Numpy, skearn.decomposition.FastICA, Matplotlib, PIL, Skimage
+# Documentaion
+ICA: 
+https://en.wikipedia.org/wiki/Independent_component_analysis
+https://www.cs.helsinki.fi/u/ahyvarin/whatisica.shtml
+FastICA: 
+https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html
