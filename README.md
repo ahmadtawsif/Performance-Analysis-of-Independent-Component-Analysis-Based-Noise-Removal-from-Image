@@ -17,7 +17,7 @@ In three different cases of noises - Gaussian, Non-Gaussian, and Log-Gaussian - 
 Python, Numpy, skearn.decomposition.FastICA, Matplotlib, PIL, Skimage
 # Documentaion
 ICA: 
-https://en.wikipedia.org/wiki/Independent_component_analysis
-https://www.cs.helsinki.fi/u/ahyvarin/whatisica.shtml
+https://en.wikipedia.org/wiki/Independent_component_analysis , 
+https://www.cs.helsinki.fi/u/ahyvarin/whatisica.shtml;
 FastICA: 
 https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.FastICA.html
